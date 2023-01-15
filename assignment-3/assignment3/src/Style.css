@@ -1,0 +1,70 @@
+body,
+html {
+  size: 100%;
+  /* background-image: linear-gradient(#000000fa);  */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.mainpage-contents {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  margin: auto;
+  width: 50%;
+}
+.description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  margin: auto;
+  width: 50%;
+}
+ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+h3 {
+  color: rgb(241, 138, 41);
+}
+.catering {
+  width: 50%;
+  border: 5px solid green;
+  padding: 50px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.visitor-guide {
+  width: 50%;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.other-center {
+  width: 50%;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+.author-description {
+  width: 50%;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}

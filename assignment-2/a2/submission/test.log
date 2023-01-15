@@ -1,0 +1,359 @@
+
+> web222-assignment-2@7.0.0 test
+> jest --verbose --
+
+FAIL src/problem-02.test.js
+  Problem 02 - observationsByPrivacy()
+    √ should throw if privacy is not one of the expected values (46 ms)
+    × should include the expected objects for a privacy = hidden (4 ms)
+    × should include the expected objects for a privacy = HIDDEN (1 ms)
+    × should include the expected objects for a privacy = null (1 ms)
+    × should return expected Array if data contains strings and null (1 ms)
+
+  ● Problem 02 - observationsByPrivacy() › should include the expected objects for a privacy = hidden
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      19 |     const hidden = observationsByPrivacy(data, 'hidden');
+      20 |
+    > 21 |     expect(hidden.length).toBe(3);
+         |                           ^
+      22 |     hidden.forEach((observation) => {
+      23 |       expect(typeof observation).toBe('object');
+      24 |       expect(observation.geoprivacy).toBe('hidden');
+
+      at Object.toBe (C:\Users\hkg\OneDrive\Documents\WEB22ZAA\AssignmentFolder\a2(3)(1)../../../../../../../../a2/src/problem-02.test.js:21:27)
+
+  ● Problem 02 - observationsByPrivacy() › should include the expected objects for a privacy = HIDDEN
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      29 |     const hidden = observationsByPrivacy(data, 'HIDDEN');
+      30 |
+    > 31 |     expect(hidden.length).toBe(3);
+         |                           ^
+      32 |     hidden.forEach((observation) => {
+      33 |       expect(typeof observation).toBe('object');
+      34 |       expect(observation.geoprivacy).toBe('hidden');
+
+      at Object.toBe (C:\Users\hkg\OneDrive\Documents\WEB22ZAA\AssignmentFolder\a2(3)(1)../../../../../../../../a2/src/problem-02.test.js:31:27)
+
+  ● Problem 02 - observationsByPrivacy() › should include the expected objects for a privacy = null
+
+    TypeError: Cannot read properties of null (reading 'toLowerCase')
+
+      161 |   if (
+      162 |     !(
+    > 163 |       (geoPrivacy === geoPrivacy.toLowerCase()) === 'open' ||
+          |                                  ^
+      164 |       geoPrivacy.toLowerCase() === 'hidden' ||
+      165 |       geoPrivacy === null
+      166 |     )
+
+      at toLowerCase (C:\Users\hkg\OneDrive\Documents\WEB22ZAA\AssignmentFolder\a2(3)(1)../../../../../../../../a2/src/observations.js:163:34)
+      at Object.observationsByPrivacy (C:\Users\hkg\OneDrive\Documents\WEB22ZAA\AssignmentFolder\a2(3)(1)../../../../../../../../a2/src/problem-02.test.js:39:20)
+
+  ● Problem 02 - observationsByPrivacy() › should return expected Array if data contains strings and null
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 0
+
+      56 |     };
+      57 |     const hidden = observationsByPrivacy(mixedResults, 'hidden');
+    > 58 |     expect(hidden.length).toBe(2);
+         |                           ^
+      59 |     hidden.forEach((observation) => {
+      60 |       expect(typeof observation).toBe('object');
+      61 |       expect(observation.geoprivacy).toBe('hidden');
+
+      at Object.toBe (C:\Users\hkg\OneDrive\Documents\WEB22ZAA\AssignmentFolder\a2(3)(1)../../../../../../../../a2/src/problem-02.test.js:58:27)
+
+FAIL submission/src/problem-02.test.js
+  Problem 02 - observationsByPrivacy()
+    √ should throw if privacy is not one of the expected values (44 ms)
+    × should include the expected objects for a privacy = hidden (4 ms)
+    × should include the expected objects for a privacy = HIDDEN (1 ms)
+    × should include the expected objects for a privacy = null (1 ms)
+    × should return expected Array if data contains strings and null (2 ms)
+
+  ● Problem 02 - observationsByPrivacy() › should include the expected objects for a privacy = hidden
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      19 |     const hidden = observationsByPrivacy(data, 'hidden');
+      20 |
+    > 21 |     expect(hidden.length).toBe(3);
+         |                           ^
+      22 |     hidden.forEach((observation) => {
+      23 |       expect(typeof observation).toBe('object');
+      24 |       expect(observation.geoprivacy).toBe('hidden');
+
+      at Object.toBe (C:\Users\hkg\OneDrive\Documents\WEB22ZAA\AssignmentFolder\a2(3)(1)../../../../../../../../a2/submission/src/problem-02.test.js:21:27)
+
+  ● Problem 02 - observationsByPrivacy() › should include the expected objects for a privacy = HIDDEN
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      29 |     const hidden = observationsByPrivacy(data, 'HIDDEN');
+      30 |
+    > 31 |     expect(hidden.length).toBe(3);
+         |                           ^
+      32 |     hidden.forEach((observation) => {
+      33 |       expect(typeof observation).toBe('object');
+      34 |       expect(observation.geoprivacy).toBe('hidden');
+
+      at Object.toBe (C:\Users\hkg\OneDrive\Documents\WEB22ZAA\AssignmentFolder\a2(3)(1)../../../../../../../../a2/submission/src/problem-02.test.js:31:27)
+
+  ● Problem 02 - observationsByPrivacy() › should include the expected objects for a privacy = null
+
+    TypeError: Cannot read properties of null (reading 'toLowerCase')
+
+      161 |   if (
+      162 |     !(
+    > 163 |       (geoPrivacy === geoPrivacy.toLowerCase()) === 'open' ||
+          |                                  ^
+      164 |       geoPrivacy.toLowerCase() === 'hidden' ||
+      165 |       geoPrivacy === null
+      166 |     )
+
+      at toLowerCase (C:\Users\hkg\OneDrive\Documents\WEB22ZAA\AssignmentFolder\a2(3)(1)../../../../../../../../a2/submission/src/observations.js:163:34)
+      at Object.observationsByPrivacy (C:\Users\hkg\OneDrive\Documents\WEB22ZAA\AssignmentFolder\a2(3)(1)../../../../../../../../a2/submission/src/problem-02.test.js:39:20)
+
+  ● Problem 02 - observationsByPrivacy() › should return expected Array if data contains strings and null
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 0
+
+      56 |     };
+      57 |     const hidden = observationsByPrivacy(mixedResults, 'hidden');
+    > 58 |     expect(hidden.length).toBe(2);
+         |                           ^
+      59 |     hidden.forEach((observation) => {
+      60 |       expect(typeof observation).toBe('object');
+      61 |       expect(observation.geoprivacy).toBe('hidden');
+
+      at Object.toBe (C:\Users\hkg\OneDrive\Documents\WEB22ZAA\AssignmentFolder\a2(3)(1)../../../../../../../../a2/submission/src/problem-02.test.js:58:27)
+
+PASS submission/src/problem-03.test.js
+  Problem 03 - transformObservation(), transformObservations(), transformObservations2() functions
+    transformObservation() function
+      √ should return an Object (3 ms)
+      √ should return an Object containing an id property (1 ms)
+      √ should return an Object containing a speciesGuess property (5 ms)
+      √ should return an Object containing an isResearchQuality property (6 ms)
+      √ should return an Object containing a.geoCoords Array property (1 ms)
+      √ geoCoords Array should include two Numbers (2 ms)
+      √ geoCoords Array should be in the form [lng, lat] (1 ms)
+      √ should return an Object containing a user property
+      √ should return an Object containing a photos Array of URLs (3 ms)
+      √ should return an Object containing a photos Array of multiple URLs (3 ms)
+    transformObservations() function
+      √ should return an Array (1 ms)
+      √ should return a new Array (2 ms)
+      √ should return an Array with the same number of elements (1 ms)
+      √ should return an Array of Objects
+      √ should return an Array with Objects containing an id property
+      √ should return an Object containing a speciesGuess property (1 ms)
+      √ should return an Object containing an isResearchQuality property (1 ms)
+      √ should return an Object containing a.geoCoords Array property (1 ms)
+      √ geoCoords Array should include two Numbers (1 ms)
+      √ geoCoords Array should be in the form [lng, lat] (1 ms)
+      √ should return an Object containing a user property (13 ms)
+      √ should return an Object containing a photoUrls Array of URLs (1 ms)
+      √ should return an Object containing a photos Array of multiple URLs (2 ms)
+      √ real-world data should behave the same way as test data (5 ms)
+    transformObservations2() function
+      √ should return an Array (1 ms)
+      √ should return a new Array
+      √ should return an Array with the same number of elements (1 ms)
+      √ should return an Array of Objects
+      √ should return an Array with Objects containing an id property
+      √ should return an Object containing a speciesGuess property (1 ms)
+      √ should return an Object containing an isResearchQuality property
+      √ should return an Object containing a geoCoords Array property
+      √ geoCoords Array should include two Numbers (1 ms)
+      √ geoCoords Array should be in the form [lng, lat]
+      √ should return an Object containing a user property
+      √ should return an Object containing a photos Array of URLs
+      √ should return an Object containing a photos Array of multiple URLs (1 ms)
+      √ real-world data should behave the same way as test data (2 ms)
+
+PASS src/problem-03.test.js
+  Problem 03 - transformObservation(), transformObservations(), transformObservations2() functions
+    transformObservation() function
+      √ should return an Object (1 ms)
+      √ should return an Object containing an id property
+      √ should return an Object containing a speciesGuess property (1 ms)
+      √ should return an Object containing an isResearchQuality property (1 ms)
+      √ should return an Object containing a.geoCoords Array property (1 ms)
+      √ geoCoords Array should include two Numbers
+      √ geoCoords Array should be in the form [lng, lat]
+      √ should return an Object containing a user property (1 ms)
+      √ should return an Object containing a photos Array of URLs (1 ms)
+      √ should return an Object containing a photos Array of multiple URLs (1 ms)
+    transformObservations() function
+      √ should return an Array
+      √ should return a new Array (1 ms)
+      √ should return an Array with the same number of elements (1 ms)
+      √ should return an Array of Objects
+      √ should return an Array with Objects containing an id property
+      √ should return an Object containing a speciesGuess property (8 ms)
+      √ should return an Object containing an isResearchQuality property
+      √ should return an Object containing a.geoCoords Array property (1 ms)
+      √ geoCoords Array should include two Numbers
+      √ geoCoords Array should be in the form [lng, lat] (1 ms)
+      √ should return an Object containing a user property
+      √ should return an Object containing a photoUrls Array of URLs (1 ms)
+      √ should return an Object containing a photos Array of multiple URLs (1 ms)
+      √ real-world data should behave the same way as test data (4 ms)
+    transformObservations2() function
+      √ should return an Array
+      √ should return a new Array (1 ms)
+      √ should return an Array with the same number of elements
+      √ should return an Array of Objects
+      √ should return an Array with Objects containing an id property (1 ms)
+      √ should return an Object containing a speciesGuess property
+      √ should return an Object containing an isResearchQuality property (1 ms)
+      √ should return an Object containing a geoCoords Array property
+      √ geoCoords Array should include two Numbers
+      √ geoCoords Array should be in the form [lng, lat]
+      √ should return an Object containing a user property (1 ms)
+      √ should return an Object containing a photos Array of URLs
+      √ should return an Object containing a photos Array of multiple URLs (1 ms)
+      √ real-world data should behave the same way as test data (2 ms)
+
+PASS submission/src/problem-05.test.js
+  Problem 05 - getObservationsByPositionalAccuracy() function
+    √ missing options object returns same Array as original (3 ms)
+    √ empty options object returns same Array as original (1 ms)
+    √ equal value returns an Array of expected results (1 ms)
+    √ equal with unknown value returns an empty Array (1 ms)
+    √ greaterThan value returns an Array of expected results (2 ms)
+    √ greaterThan value larger than largest known returns an empty Array
+    √ lessThan value returns an Array of expected results (2 ms)
+    √ lessThan value smaller than smallest known returns an empty Array
+    √ greaterThan and lessThan values together return an Array of expected results (1 ms)
+    √ greaterThan and lessThan values too close together return an empty Array
+    √ equal is used over gte/lte if all are present (2 ms)
+
+PASS src/problem-05.test.js
+  Problem 05 - getObservationsByPositionalAccuracy() function
+    √ missing options object returns same Array as original (2 ms)
+    √ empty options object returns same Array as original
+    √ equal value returns an Array of expected results (2 ms)
+    √ equal with unknown value returns an empty Array
+    √ greaterThan value returns an Array of expected results (3 ms)
+    √ greaterThan value larger than largest known returns an empty Array (1 ms)
+    √ lessThan value returns an Array of expected results (3 ms)
+    √ lessThan value smaller than smallest known returns an empty Array
+    √ greaterThan and lessThan values together return an Array of expected results (2 ms)
+    √ greaterThan and lessThan values too close together return an empty Array (1 ms)
+    √ equal is used over gte/lte if all are present (2 ms)
+
+PASS src/problem-01.test.js
+  Problem 01 Part 1 - observationSummary() function with for loop
+    √ observationSummary() should call console.log() once per case (3 ms)
+    √ observationSummary() should log correct format of all cases (6 ms)
+  Problem 01 Part 2 - observationSummary2() function with forEach()
+    √ observationSummary2() should call console.log() once per case
+    √ observationSummary2() should log correct format of all cases (4 ms)
+
+PASS submission/src/problem-01.test.js
+  Problem 01 Part 1 - observationSummary() function with for loop
+    √ observationSummary() should call console.log() once per case (3 ms)
+    √ observationSummary() should log correct format of all cases (5 ms)
+  Problem 01 Part 2 - observationSummary2() function with forEach()
+    √ observationSummary2() should call console.log() once per case
+    √ observationSummary2() should log correct format of all cases (4 ms)
+
+PASS src/problem-08.test.js
+  extractUserLogins() and extractUserLogins2
+    √ should return a single result (4 ms)
+    √ extractUserLogins should not return duplicates (1 ms)
+    √ extractUserLogins should work on real data
+    √ should return a single result (1 ms)
+    √ extractUserLogins should not return duplicates (1 ms)
+    √ extractUserLogins should work on real data
+
+PASS src/problem-06.test.js
+  Problem 06 - getTaxonPhotos() function
+    √ should return an Array of Objects with the right URLs (4 ms)
+    √ should return an empty Array if missing taxon (1 ms)
+    √ real-data should produce the expected result (23 ms)
+
+PASS src/problem-00.test.js
+  Problem 00 - getTotalResults() function
+    √ getTotalResults() should return a Number (2 ms)
+    √ getTotalResults() should contain the correct number of items (1 ms)
+
+PASS src/problem-07.test.js
+  Problem 07 - getUserStats() function
+    √ should return an Object with the right properties (4 ms)
+    √ should return an Object with correct count properties (1 ms)
+    √ should return an Object with correct totals (1 ms)
+    √ should return an Object with correct averages (1 ms)
+    √ real-data should produce the expected stats Object (2 ms)
+
+PASS submission/src/problem-07.test.js
+  Problem 07 - getUserStats() function
+    √ should return an Object with the right properties (3 ms)
+    √ should return an Object with correct count properties (1 ms)
+    √ should return an Object with correct totals (1 ms)
+    √ should return an Object with correct averages (1 ms)
+    √ real-data should produce the expected stats Object (1 ms)
+
+PASS submission/src/problem-06.test.js
+  Problem 06 - getTaxonPhotos() function
+    √ should return an Array of Objects with the right URLs (3 ms)
+    √ should return an empty Array if missing taxon
+    √ real-data should produce the expected result (21 ms)
+
+PASS submission/src/problem-04.test.js
+  Problem 04 - getObservationsById() function
+    √ if an unknown id is passed, null is returned (2 ms)
+    √ if a single, known id is passed, the full Object should be returned (1 ms)
+    √ if a multiple known ids are passed, an Array of the full Objects should be returned (1 ms)
+    √ if some known and some unknown ids are passed, an Array of the known Objects should be returned (1 ms)
+
+PASS src/problem-04.test.js
+  Problem 04 - getObservationsById() function
+    √ if an unknown id is passed, null is returned (3 ms)
+    √ if a single, known id is passed, the full Object should be returned (10 ms)
+    √ if a multiple known ids are passed, an Array of the full Objects should be returned (1 ms)
+    √ if some known and some unknown ids are passed, an Array of the known Objects should be returned (2 ms)
+
+PASS submission/src/problem-00.test.js
+  Problem 00 - getTotalResults() function
+    √ getTotalResults() should return a Number (2 ms)
+    √ getTotalResults() should contain the correct number of items
+
+PASS submission/src/problem-08.test.js
+  extractUserLogins() and extractUserLogins2
+    √ should return a single result (2 ms)
+    √ extractUserLogins should not return duplicates (1 ms)
+    √ extractUserLogins should work on real data
+    √ should return a single result
+    √ extractUserLogins should not return duplicates (1 ms)
+    √ extractUserLogins should work on real data
+
+Test Suites: 2 failed, 16 passed, 18 total
+Tests:       8 failed, 148 passed, 156 total
+Snapshots:   0 total
+Time:        3.763 s
+Ran all test suites.
